@@ -7,6 +7,6 @@ async fn main() {
     println!("Initializing Engine");
 
     // using the logging config stuff
-    let logging_config = get_logging_config();
+    let logging_config = config::get_logging_config();
     println!("Logging level: {:?}", logging_config);
 }

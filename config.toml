@@ -1,0 +1,6 @@
+[logging]
+    level = "Info"
+
+    [discord]
+    bot_token = ""
+    

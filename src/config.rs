@@ -1,15 +1,14 @@
 ﻿use colored::Colorize;
 use once_cell::sync::Lazy;
 use serde::{Deserialize, Serialize};
-use sqlx::{Pool, Sqlite, SqlitePool};
+use sqlx::sqlite::SqlitePool;
 use std::{
     fs,
     io::{self, Write},
     str::FromStr,
 };
-use tokio::sync::Mutex;
-use toml::Value;
-use tracing::{debug, level_filters::LevelFilter, warn};
+use sqlx::{Pool, Sqlite};
+use tracing::{level_filters::LevelFilter};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Config {
